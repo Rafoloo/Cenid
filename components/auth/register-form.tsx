@@ -19,7 +19,7 @@ import {
 import { CardWrapper } from "@/components/auth/card-wrapper";
 import { Button } from "@/components/ui/button"
 import { FormError } from "@/components/ui/form-error"
-import { FormSucess } from "../ui/form-sucess";
+import { FormSuccess } from "../ui/form-success";
 import { register } from "@/actions/register";
 import { useState, useTransition } from "react";
 
@@ -68,7 +68,7 @@ export const RegisterForm = () => {
                     <Input 
                         {...field}
                         disabled={isPending}
-                        placeholder="John Doe"
+                        placeholder="Nome"
                         type="name"
                     />
                   </FormControl>
@@ -86,7 +86,7 @@ export const RegisterForm = () => {
                     <Input 
                         {...field}
                         disabled={isPending}
-                        placeholder="john.doe@example.com"
+                        placeholder="mail@example.com"
                         type="email"
                     />
                   </FormControl>
@@ -114,7 +114,7 @@ export const RegisterForm = () => {
             />
           </div>
           <FormError message={error}/>
-          <FormSucess message={sucess}/>
+          <FormSuccess message={sucess}/>
           <Button 
             disabled={isPending}
             type="submit"
